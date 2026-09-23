@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #181818;
+  padding: 22px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  margin: 0 0 20px;
+  font-size: 32px;
+  letter-spacing: 4px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff4fa3;
+}
+
+main {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 70px 0;
+}
+
+.texto {
+  flex: 1;
+  animation: aparecer 1s ease;
+}
+
+.subtitulo {
+  color: #ff4fa3;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.hero h2 {
+  font-size: 65px;
+  line-height: 0.95;
+  margin: 15px 0 25px;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.botao {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 25px;
+  background-color: #ff4fa3;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: white;
+  color: #111;
+  transform: translateY(-4px);
+}
+
+.imagem {
+  flex: 1;
+  text-align: center;
+  animation: subir 1s ease;
+}
+
+.imagem img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+.imagem img:hover {
+  transform: scale(1.3);
+}
+
+.destaques {
+  padding: 80px 0;
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.titulo h2 {
+  font-size: 42px;
+  margin: 10px 0 20px;
+}
+
+.titulo > p:last-child {
+  color: #aaa;
+}
+
+.cards {
+  display: flex;
+  gap: 25px;
+}
+
+.card {
+  flex: 1;
+  background-color: #181818;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #292929;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #ff4fa3;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-conteudo {
+  padding: 25px;
+}
+
+.card h3 {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.card p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #ff4fa3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  color: white;
+}
+
+.frase {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  border-top: 1px solid #292929;
+}
+
+.frase h2 {
+  font-size: 50px;
+  margin: 15px 0;
+}
+
+.frase p:last-child {
+  color: #aaa;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+footer {
+  background-color: #181818;
+  text-align: center;
+  padding: 25px;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  color: #888;
+  margin: 5px;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes subir {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 45px;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .imagem img:hover {
+    transform: scale(1.08);
+  }
+
+  .frase h2 {
+    font-size: 38px;
+  }
+
+  nav a {
+    margin: 0 5px;
+  }
+}
+header {
+  background-color: #181818;
+  padding: 15px;
+  text-align: center;
+  border-bottom: solid rebeccapurple;
+}
+
+.cabecalho {
+  width: 100%;
+  max-width: 1000px;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 8px;
+}
+
+nav {
+  background-color: rgba(13, 13, 13, 0.75);
+  padding: 10px 25px;
+  border-radius: 30px;
+  backdrop-filter: blur(4px);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff4fa3;
+}

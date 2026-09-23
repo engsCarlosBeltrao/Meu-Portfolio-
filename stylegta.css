@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+.cabecalho h1 {
+    margin: 0 0 20px 0;
+}
+
+/* MENU */
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #ff4fa3;
+}
+
+/* CONTEUDO */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+
+
+.texto {
+    flex: 1;
+}
+
+.subtitulo {
+    color: #ff4fa3;
+    font-weight: bold;
+}
+
+.hero h2 {
+    font-size: 60px;
+    margin: 10px 0;
+}
+
+.hero p {
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+
+.imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.imagem img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+.informacoes {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    flex: 1;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.card:hover {
+    border-color: #ff4fa3;
+}
+
+/* RODAPE */
+
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #999;
+}
+
+
+
+.texto {
+    animation: aparecer 1s ease;
+}
+
+.imagem {
+    animation: aparecer 1s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+}
+.imagem img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.imagem img:hover {
+    transform: scale(1.35);
+}
+.card {
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: 0.4s;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #ff4fa3;
+}
+
+.card:hover img {
+    transform: scale(1.12);
+}

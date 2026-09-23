@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projetos acadêmicos de programação em C++ de Carlos Beltrão.">
+    <title>Projetos C++ | Carlos Beltrão</title>
+    <link rel="stylesheet" href="cpp.css">
+</head>
+
+<body>
+
+<header class="cabecalho">
+    <a href="index.html" class="logo">Carlos Beltrão<span>.</span></a>
+
+    <nav>
+        <a href="index.html">Portfólio</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#conceitos">Conceitos</a>
+    </nav>
+
+    <a href="index.html#contato" class="botao">Contato</a>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div>
+            <p class="etiqueta">PROJETO ACADÊMICO</p>
+
+            <h1>
+                Projetos de
+                <span>C++</span>
+            </h1>
+
+            <p class="descricao">
+                Exercícios e projetos desenvolvidos para praticar lógica de
+                programação, estruturas de dados, funções, ponteiros e
+                fundamentos da linguagem C++.
+            </p>
+
+            <div class="hero-botoes">
+                <a href="#projetos" class="botao">Ver projetos</a>
+                <a href="portifolio.html" class="botao secundario">Voltar ao portfólio</a>
+            </div>
+        </div>
+
+        <div class="codigo-destaque">
+            <div class="codigo-topo">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <pre><code>#include &lt;iostream&gt;
+
+using namespace std;
+
+int somar(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int resultado = somar(10, 20);
+
+    cout &lt;&lt; resultado;
+
+    return 0;
+}</code></pre>
+        </div>
+    </section>
+
+    <section class="secao" id="projetos">
+
+        <div class="titulo-secao">
+            <p class="etiqueta">01 — EXERCÍCIOS</p>
+
+            <h2>Prática de programação</h2>
+
+            <p>
+                Alguns exemplos de conceitos estudados durante o aprendizado
+                de C++.
+            </p>
+        </div>
+
+        <div class="projetos">
+
+            <article class="card">
+                <div class="numero">01</div>
+
+                <h3>Funções</h3>
+
+                <p>
+                    Criação de funções para organizar o código e realizar
+                    operações específicas.
+                </p>
+
+                <pre><code>int calcularMedia(int a, int b) {
+    return (a + b) / 2;
+}
+
+int main() {
+    int media = calcularMedia(8, 10);
+
+    cout &lt;&lt; media;
+
+    return 0;
+}</code></pre>
+
+                <div class="resultado">
+                    <strong>Resultado:</strong>
+                    <span>9</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="numero">02</div>
+
+                <h3>Estruturas de repetição</h3>
+
+                <p>
+                    Utilização de loops para repetir comandos enquanto uma
+                    determinada condição for verdadeira.
+                </p>
+
+                <pre><code>for (int i = 1; i &lt;= 5; i++) {
+    cout &lt;&lt; i &lt;&lt; endl;
+}</code></pre>
+
+                <div class="resultado">
+                    <strong>Saída:</strong>
+                    <span>1 2 3 4 5</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="numero">03</div>
+
+                <h3>Arrays</h3>
+
+                <p>
+                    Armazenamento de vários valores relacionados dentro de
+                    uma mesma estrutura.
+                </p>
+
+                <pre><code>int numeros[5] = {
+    10, 20, 30, 40, 50
+};
+
+for (int i = 0; i &lt; 5; i++) {
+    cout &lt;&lt; numeros[i] &lt;&lt; endl;
+}</code></pre>
+
+                <div class="resultado">
+                    <strong>Quantidade:</strong>
+                    <span>5 elementos</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="numero">04</div>
+
+                <h3>Ponteiros</h3>
+
+                <p>
+                    Estudo de ponteiros e acesso ao endereço de uma variável
+                    na memória.
+                </p>
+
+                <pre><code>int numero = 25;
+
+int* ponteiro = &amp;numero;
+
+cout &lt;&lt; *ponteiro;</code></pre>
+
+                <div class="resultado">
+                    <strong>Valor:</strong>
+                    <span>25</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="numero">05</div>
+
+                <h3>Struct</h3>
+
+                <p>
+                    Organização de diferentes informações relacionadas em uma
+                    única estrutura.
+                </p>
+
+                <pre><code>struct Aluno {
+    string nome;
+    int idade;
+};
+
+Aluno aluno;
+
+aluno.nome = "Carlos";
+aluno.idade = 18;</code></pre>
+
+                <div class="resultado">
+                    <strong>Aluno:</strong>
+                    <span>Carlos</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="numero">06</div>
+
+                <h3>Condicionais</h3>
+
+                <p>
+                    Utilização de decisões para executar diferentes partes
+                    do programa.
+                </p>
+
+                <pre><code>int nota = 8;
+
+if (nota &gt;= 7) {
+    cout &lt;&lt; "Aprovado";
+} else {
+    cout &lt;&lt; "Reprovado";
+}</code></pre>
+
+                <div class="resultado">
+                    <strong>Resultado:</strong>
+                    <span>Aprovado</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="secao destaque">
+
+        <div class="titulo-secao">
+            <p class="etiqueta">02 — PROJETO EM DESTAQUE</p>
+
+            <h2>Jogo inspirado em Minecraft</h2>
+
+            <p>
+                Um dos projetos desenvolvidos durante meus estudos foi um jogo
+                inspirado em Minecraft utilizando C++ diretamente no terminal.
+                O projeto reuniu diferentes conceitos de programação em uma
+                aplicação prática.
+            </p>
+        </div>
+
+        <div class="jogo">
+
+            <div class="jogo-topo">
+                <span>TERMINAL — C++</span>
+                <span>PROJETO</span>
+            </div>
+
+            <pre><code>================================
+        MUNDO C++ 
+================================
+
+Jogador: Carlos
+
+Posição:
+X: 5
+Y: 5
+
+Inventário:
+[ Madeira ] [ Pedra ] [ Terra ]
+
+--------------------------------
+
+1 - Andar
+2 - Quebrar bloco
+3 - Colocar bloco
+4 - Inventário
+5 - Sair
+
+Escolha uma opção: 1
+
+O jogador se movimentou!
+
+================================</code></pre>
+
+        </div>
+
+        <div class="jogo-info">
+
+            <div>
+                <strong>01</strong>
+                <span>Terminal</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>C++</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Lógica</span>
+            </div>
+
+            <div>
+                <strong>04</strong>
+                <span>Interação</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="secao" id="conceitos">
+
+        <div class="titulo-secao">
+            <p class="etiqueta">03 — CONHECIMENTOS</p>
+
+            <h2>Conceitos estudados</h2>
+        </div>
+
+        <div class="conceitos-grid">
+
+            <div class="conceito">
+                <strong>01</strong>
+                <h3>Lógica</h3>
+                <p>
+                    Raciocínio lógico para resolver problemas através
+                    de algoritmos.
+                </p>
+            </div>
+
+            <div class="conceito">
+                <strong>02</strong>
+                <h3>Funções</h3>
+                <p>
+                    Divisão do programa em blocos reutilizáveis.
+                </p>
+            </div>
+
+            <div class="conceito">
+                <strong>03</strong>
+                <h3>Ponteiros</h3>
+                <p>
+                    Manipulação de endereços e valores armazenados
+                    na memória.
+                </p>
+            </div>
+
+            <div class="conceito">
+                <strong>04</strong>
+                <h3>Estruturas</h3>
+                <p>
+                    Organização de dados utilizando arrays, structs
+                    e outras estruturas.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta">
+
+        <p class="etiqueta">PRÓXIMO PASSO</p>
+
+        <h2>
+            Continuando a evoluir
+            <span>um código por vez.</span>
+        </h2>
+
+        <p>
+            Este projeto representa parte da minha jornada acadêmica
+            e do aprendizado em programação.
+        </p>
+
+        <a href="portifolio.html" class="botao">
+            Voltar ao portfólio
+        </a>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Carlos Gabriel Beltrão</p>
+
+    <a href="portifolio.html">
+        Voltar ao portfólio ↑
+    </a>
+</footer>
+
+</body>
+</html>

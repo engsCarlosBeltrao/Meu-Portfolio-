@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --fundo: #080b12;
+    --fundo-card: #111722;
+    --fundo-codigo: #0b1018;
+    --texto: #f5f7fb;
+    --texto-secundario: #9ca8ba;
+    --azul: #4d8dff;
+    --azul-claro: #8db7ff;
+    --borda: #222c3b;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.cabecalho {
+    width: min(1120px, 92%);
+    margin: auto;
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.logo span,
+.hero h1 span,
+.cta h2 span {
+    color: var(--azul);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--texto-secundario);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--azul-claro);
+}
+
+.botao {
+    display: inline-block;
+    background: var(--azul);
+    color: #07101f;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.15);
+}
+
+.secundario {
+    background: transparent;
+    color: var(--texto);
+    border: 1px solid var(--borda);
+}
+
+.hero {
+    width: min(1120px, 92%);
+    min-height: 650px;
+    margin: auto;
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.etiqueta {
+    color: var(--azul-claro);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.descricao {
+    color: var(--texto-secundario);
+    max-width: 580px;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.codigo-destaque {
+    background: var(--fundo-codigo);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+}
+
+.codigo-topo {
+    height: 42px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.codigo-topo span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--borda);
+}
+
+pre {
+    overflow-x: auto;
+}
+
+.codigo-destaque pre {
+    padding: 30px;
+}
+
+code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+.secao {
+    width: min(1120px, 92%);
+    margin: auto;
+    padding: 100px 0;
+}
+
+.titulo-secao {
+    max-width: 700px;
+    margin-bottom: 45px;
+}
+
+.titulo-secao h2 {
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.titulo-secao > p:last-child {
+    color: var(--texto-secundario);
+}
+
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.card {
+    background: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    padding: 28px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--azul);
+}
+
+.numero {
+    color: var(--azul);
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card > p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    margin-bottom: 22px;
+}
+
+.card pre {
+    background: var(--fundo-codigo);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+.resultado {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--borda);
+    font-size: 0.85rem;
+}
+
+.resultado strong {
+    color: var(--azul-claro);
+}
+
+.resultado span {
+    color: var(--texto-secundario);
+}
+
+.destaque {
+    border-top: 1px solid var(--borda);
+}
+
+.jogo {
+    background: var(--fundo-codigo);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.jogo-topo {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 22px;
+    border-bottom: 1px solid var(--borda);
+    color: var(--azul-claro);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.jogo pre {
+    padding: 30px;
+}
+
+.jogo-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.jogo-info div {
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.jogo-info strong {
+    display: block;
+    color: var(--azul);
+    font-size: 1.8rem;
+}
+
+.jogo-info span {
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+}
+
+.conceitos {
+    border-top: 1px solid var(--borda);
+}
+
+.conceitos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.conceito {
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.conceito strong {
+    color: var(--azul);
+    font-size: 2rem;
+}
+
+.conceito h3 {
+    margin: 15px 0 8px;
+}
+
+.conceito p {
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+}
+
+.cta {
+    width: min(1120px, 92%);
+    margin: 0 auto 80px;
+    padding: 80px 8%;
+    text-align: center;
+    background: var(--fundo-card);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+}
+
+.cta h2 {
+    max-width: 700px;
+    margin: 0 auto 18px;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.1;
+}
+
+.cta > p:not(.etiqueta) {
+    color: var(--texto-secundario);
+    max-width: 600px;
+    margin: 0 auto 28px;
+}
+
+footer {
+    width: min(1120px, 92%);
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--texto-secundario);
+    font-size: 0.85rem;
+}
+
+footer a:hover {
+    color: var(--azul-claro);
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 60px 0;
+    }
+
+    .conceitos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .jogo-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 15px;
+        font-size: 0.85rem;
+    }
+
+    .cabecalho .botao {
+        display: none;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .projetos,
+    .conceitos-grid,
+    .jogo-info {
+        grid-template-columns: 1fr;
+    }
+
+    .secao {
+        padding: 65px 0;
+    }
+
+    .cta {
+        padding: 50px 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
