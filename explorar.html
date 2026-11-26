@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="gta6.css?v=2">
+  <link rel="stylesheet" href="gta6.css?v=3">
 </head>
 <body>
   <header class="topo">
@@ -36,18 +36,110 @@
     </section>
 
     <section class="secao conteudo">
-      <h2 class="secao-titulo">Regiões</h2>
-      <p class="secao-texto">Algumas das áreas de Leonida mostradas até agora.</p>
+      <h2 class="secao-titulo">Mapa de Leonida</h2>
+      <p class="secao-texto">Clique em uma região para conhecer. Mapa ilustrativo, com posições aproximadas.</p>
 
-      <div class="regioes">
-        <article class="regiao"><h3>Vice City</h3><p>A grande cidade do estado, com praias, neon e vida noturna.</p></article>
-        <article class="regiao"><h3>Leonida Keys</h3><p>Ilhas e águas cristalinas ao sul do continente.</p></article>
-        <article class="regiao"><h3>Grassrivers</h3><p>Pântanos e áreas alagadas, cheios de vida selvagem.</p></article>
-        <article class="regiao"><h3>Port Gellhorn</h3><p>Cidade portuária mais esquecida, longe do brilho da capital.</p></article>
-        <article class="regiao"><h3>Ambrosia</h3><p>Região do interior, ligada à indústria e ao campo.</p></article>
-        <article class="regiao"><h3>Mount Kalaga</h3><p>Parque nacional com trilhas, mata e paisagens de serra.</p></article>
+      <div class="mapa">
+        <div class="mapa-area">
+          <svg class="mapa-svg" viewBox="0 0 600 720" role="group" aria-label="Mapa ilustrativo de Leonida">
+            <defs>
+              <linearGradient id="por-do-sol" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ff4fa3" />
+                <stop offset="1" stop-color="#ff9a3c" />
+              </linearGradient>
+              <pattern id="ondas" width="40" height="16" patternUnits="userSpaceOnUse">
+                <path d="M0 8 Q10 2 20 8 T40 8" fill="none" stroke="rgb(62 230 208 / 0.10)" stroke-width="1.5" />
+              </pattern>
+            </defs>
+
+            <rect class="mar" x="0" y="0" width="600" height="720" fill="url(#ondas)" />
+            <text class="mar-nome" x="70" y="330">Golfo</text>
+            <text class="mar-nome" x="580" y="320" text-anchor="end">Oceano</text>
+
+            <g class="regiao-mapa" data-regiao="port-gellhorn" tabindex="0" role="button" aria-label="Port Gellhorn">
+              <path d="M30 96 L120 74 L232 70 L244 156 L170 168 L84 172 L40 148 Z" />
+              <text x="128" y="128">Port Gellhorn</text>
+            </g>
+            <g class="regiao-mapa" data-regiao="ambrosia" tabindex="0" role="button" aria-label="Ambrosia">
+              <path d="M232 70 L352 64 L376 120 L392 208 L322 226 L270 212 L244 156 Z" />
+              <text x="314" y="150">Ambrosia</text>
+            </g>
+            <g class="regiao-mapa" data-regiao="mount-kalaga" tabindex="0" role="button" aria-label="Mount Kalaga">
+              <path d="M352 64 L432 70 L490 110 L506 196 L478 250 L392 208 L376 120 Z" />
+              <text x="440" y="160">Mount Kalaga</text>
+            </g>
+            <g class="regiao-mapa" data-regiao="grassrivers" tabindex="0" role="button" aria-label="Grassrivers">
+              <path d="M322 226 L392 208 L478 250 L486 370 L446 452 L400 532 L356 486 L322 400 L306 300 Z" />
+              <text x="398" y="350">Grassrivers</text>
+            </g>
+            <g class="regiao-mapa" data-regiao="vice-city" tabindex="0" role="button" aria-label="Vice City">
+              <path d="M486 370 L522 430 L512 520 L478 586 L438 612 L400 532 L446 452 Z" />
+              <text x="470" y="508">Vice City</text>
+            </g>
+            <g class="regiao-mapa" data-regiao="leonida-keys" tabindex="0" role="button" aria-label="Leonida Keys">
+              <path d="M418 640 q12 -8 22 0 q-10 10 -22 0 Z M380 660 q14 -8 26 0 q-12 10 -26 0 Z M338 676 q14 -8 26 0 q-12 10 -26 0 Z M294 688 q14 -8 26 0 q-12 10 -26 0 Z M250 696 q14 -8 26 0 q-12 10 -26 0 Z M204 700 q12 -7 22 0 q-10 9 -22 0 Z" />
+              <rect class="toque" x="196" y="626" width="252" height="88" />
+              <text x="300" y="652">Leonida Keys</text>
+            </g>
+          </svg>
+        </div>
+
+        <aside class="mapa-painel" aria-live="polite">
+          <p class="chamada" id="painel-tipo">Cidade</p>
+          <h3 id="painel-nome">Vice City</h3>
+          <p id="painel-texto">A grande cidade do estado, com praias, neon e vida noturna.</p>
+          <ul class="painel-destaques" id="painel-destaques"></ul>
+          <div class="mapa-lista" role="group" aria-label="Escolher região">
+            <button type="button" data-regiao="vice-city">Vice City</button>
+            <button type="button" data-regiao="leonida-keys">Leonida Keys</button>
+            <button type="button" data-regiao="grassrivers">Grassrivers</button>
+            <button type="button" data-regiao="port-gellhorn">Port Gellhorn</button>
+            <button type="button" data-regiao="ambrosia">Ambrosia</button>
+            <button type="button" data-regiao="mount-kalaga">Mount Kalaga</button>
+          </div>
+        </aside>
       </div>
     </section>
+
+    <script>
+      const regioes = {
+        'vice-city': { tipo: 'Cidade', nome: 'Vice City', texto: 'A grande cidade do estado, com praias, neon e vida noturna.', destaques: ['Orla e praias', 'Avenidas e arranha-céus', 'Vida noturna'] },
+        'leonida-keys': { tipo: 'Ilhas', nome: 'Leonida Keys', texto: 'Ilhas e águas cristalinas ao sul do continente.', destaques: ['Cadeia de ilhas', 'Pontes sobre o mar', 'Águas claras'] },
+        'grassrivers': { tipo: 'Pântano', nome: 'Grassrivers', texto: 'Pântanos e áreas alagadas, cheios de vida selvagem.', destaques: ['Áreas alagadas', 'Vida selvagem', 'Barcos e estradas isoladas'] },
+        'port-gellhorn': { tipo: 'Porto', nome: 'Port Gellhorn', texto: 'Cidade portuária mais esquecida, longe do brilho da capital.', destaques: ['Porto', 'Cidade pequena', 'Longe da capital'] },
+        'ambrosia': { tipo: 'Interior', nome: 'Ambrosia', texto: 'Região do interior, ligada à indústria e ao campo.', destaques: ['Indústria', 'Campo', 'Estradas do interior'] },
+        'mount-kalaga': { tipo: 'Parque nacional', nome: 'Mount Kalaga', texto: 'Parque nacional com trilhas, mata e paisagens de serra.', destaques: ['Trilhas', 'Mata', 'Serra'] },
+      }
+      const tipo = document.getElementById('painel-tipo')
+      const nome = document.getElementById('painel-nome')
+      const texto = document.getElementById('painel-texto')
+      const destaques = document.getElementById('painel-destaques')
+      const alvos = document.querySelectorAll('[data-regiao]')
+
+      function mostrar(id) {
+        const r = regioes[id]
+        if (!r) return
+        tipo.textContent = r.tipo
+        nome.textContent = r.nome
+        texto.textContent = r.texto
+        destaques.innerHTML = r.destaques.map((d) => '<li>' + d + '</li>').join('')
+        alvos.forEach((el) => {
+          const ativo = el.dataset.regiao === id
+          el.classList.toggle('ativa', ativo)
+          if (el.tagName === 'BUTTON') el.setAttribute('aria-pressed', String(ativo))
+        })
+      }
+
+      alvos.forEach((el) => {
+        el.addEventListener('click', () => mostrar(el.dataset.regiao))
+        if (el.tagName !== 'BUTTON') {
+          el.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); mostrar(el.dataset.regiao) }
+          })
+        }
+      })
+      mostrar('vice-city')
+    </script>
 
     <section class="faixa">
       <div class="conteudo">
