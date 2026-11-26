@@ -1,125 +1,218 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GTA VI</title>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carlos Gabriel Beltrão | Desenvolvedor</title>
+  <meta name="description" content="Portfólio de Carlos Gabriel Beltrão, estudante de Engenharia de Software e desenvolvedor web. Criador da plataforma Copa Santidade.">
+  <meta name="theme-color" content="#0a1430">
+  <meta property="og:title" content="Carlos Gabriel Beltrão | Desenvolvedor">
+  <meta property="og:description" content="Estudante de Engenharia de Software e desenvolvedor web. Criador da plataforma Copa Santidade.">
+  <meta property="og:image" content="img/carlos.jpg">
+  <link rel="icon" href="img/carlos.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
 
-    <link rel="stylesheet" href="index.css" />
-  </head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-  <body>
-    <header>
-      <img class = "cabecalho" src ="img/logo.jpeg" alt="cabecalho">
-      
+  <header class="topo">
+    <a href="#inicio" class="marca" aria-label="Início">
+      <span class="marca-sigla">CB</span>
+      <span class="marca-nome">Carlos Beltrão</span>
+    </a>
 
-      <nav>
-      <nav>
-        <a href="index.html">Início</a>
-        <a href="vicecity.html">Vice City</a>
-        <a href="personagens.html">Personagens</a>
-        <a href="portifolio.html" >Voltar ao portifolio</a>
-      </nav>
-    </header>
+    <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="sr">Abrir menu</span>
+      <span class="menu-linhas" aria-hidden="true"></span>
+    </button>
 
-    <main>
-      <section class="hero">
-        <div class="texto">
-          <p class="subtitulo">ROCKSTAR GAMES</p>
+    <nav id="menu" class="menu" aria-label="Navegação principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a class="menu-destaque" href="https://github.com/engsCarlosBeltrao" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </nav>
+  </header>
 
-          <h2>GRAND<br />THEFT AUTO VI</h2>
+  <main id="conteudo">
 
-          <p>
-            Uma nova aventura está chegando ao universo de Grand Theft Auto.
-            Conheça Vice City, explore seus diferentes ambientes e acompanhe uma
-            nova história.
+    <section class="hero" id="inicio">
+      <div class="hero-pessoa">
+        <img src="img/carlos.jpg" alt="Foto de Carlos Gabriel Beltrão" width="96" height="96">
+        <p>Carlos Gabriel Beltrão<br><span>Engenharia de Software</span></p>
+      </div>
+
+      <h1>Eu crio sistemas que as pessoas <em>usam de verdade.</em></h1>
+
+      <p class="hero-texto">
+        Sou estudante de Engenharia de Software e desenvolvedor web. Gosto de pegar um problema real,
+        entender quem vai usar e construir a solução inteira, do banco de dados à tela.
+      </p>
+
+      <div class="hero-acoes">
+        <a class="botao" href="#projetos">Ver projetos</a>
+        <a class="botao botao-linha" href="#contato">Falar comigo</a>
+      </div>
+    </section>
+
+    <section class="destaque" id="projetos" aria-labelledby="titulo-copa">
+      <div class="destaque-cabeca">
+        <p class="rotulo">Projeto principal</p>
+        <p class="destaque-status"><span class="ponto" aria-hidden="true"></span>No ar e em uso</p>
+      </div>
+
+      <div class="destaque-corpo">
+        <div class="destaque-texto">
+          <h2 id="titulo-copa">Copa Santidade</h2>
+          <p class="destaque-resumo">
+            Plataforma completa de gestão de campeonatos, criada para a II Copa Santidade.
+            Organiza tudo, do sorteio dos grupos à final, e mostra o campeonato ao vivo para o público.
           </p>
 
-          <a class="botao" href="vicecity.html"> CONHECER VICE CITY </a>
+          <ul class="lista-recursos">
+            <li><strong>Site público em tempo real</strong> com feed de cada jogo, classificação, mata-mata, artilharia e disciplina.</li>
+            <li><strong>Súmula ao vivo</strong> com cronômetro, gols, cartões e suspensões calculadas automaticamente.</li>
+            <li><strong>Cronograma automático</strong> que respeita pausas e o descanso mínimo de cada equipe.</li>
+            <li><strong>Artes para o Instagram</strong> geradas com o resultado de cada partida.</li>
+            <li><strong>Segurança no banco de dados</strong> com regras de acesso por linha e testes automatizados de ataque.</li>
+          </ul>
+
+          <ul class="tags" aria-label="Tecnologias">
+            <li>React</li><li>TypeScript</li><li>Supabase</li><li>PostgreSQL</li><li>Tailwind CSS</li><li>Vercel</li>
+          </ul>
+
+          <div class="destaque-acoes">
+            <a class="botao" href="https://copa-santidade.vercel.app" target="_blank" rel="noopener noreferrer">
+              Acessar a plataforma
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" /></svg>
+            </a>
+            <span class="nota">Código privado</span>
+          </div>
         </div>
 
-        <div class="imagem">
-          <img src="img/gtavi.jpg" alt="GTA VI" />
-        </div>
-      </section>
+        <figure class="destaque-visual" aria-hidden="true">
+          <img src="img/copa-santidade.png" alt="" width="360" height="360">
+          <dl class="numeros">
+            <div><dt>Equipes</dt><dd>12</dd></div>
+            <div><dt>Grupos</dt><dd>3</dd></div>
+            <div><dt>Testes</dt><dd>90+</dd></div>
+          </dl>
+        </figure>
+      </div>
+    </section>
 
-      <section class="destaques">
-        <div class="titulo">
-          <p class="subtitulo">GTA VI</p>
+    <section class="projetos" aria-labelledby="titulo-projetos">
+      <h2 class="titulo-secao" id="titulo-projetos">Outros projetos</h2>
 
-          <h2>O que esperar?</h2>
+      <div class="grade">
+        <article class="cartao">
+          <p class="cartao-tipo">Sistema</p>
+          <h3>CodiCheck</h3>
+          <p>Transforma listas de presença em um simples scan, para controlar a frequência das aulas sem papel.</p>
+          <ul class="tags"><li>Java</li></ul>
+          <p class="cartao-links"><span class="nota">Código privado</span></p>
+        </article>
 
+        <article class="cartao">
+          <p class="cartao-tipo">Jogo</p>
+          <h3>Pênalti Máximo</h3>
+          <p>Jogo de pênaltis em 3D com 20 clubes, modo torneio, barra de força para o chute e integração com Arduino.</p>
+          <ul class="tags"><li>JavaScript</li><li>Three.js</li><li>Arduino</li></ul>
+          <p class="cartao-links"><a href="https://github.com/engsCarlosBeltrao/Penalti-maximo" target="_blank" rel="noopener noreferrer">Ver código</a></p>
+        </article>
+
+        <article class="cartao">
+          <p class="cartao-tipo">Aplicação web</p>
+          <h3>Organizador de fila do Spotify</h3>
+          <p>Sistema com front-end, back-end em PHP e banco de dados SQL para organizar a fila de músicas.</p>
+          <ul class="tags"><li>PHP</li><li>SQL</li><li>HTML</li></ul>
+          <p class="cartao-links"><a href="https://github.com/engsCarlosBeltrao/Organizador-de-fila-spotify" target="_blank" rel="noopener noreferrer">Ver código</a></p>
+        </article>
+
+
+        <article class="cartao cartao-imagem">
+          <img src="img/gtavi.jpg" alt="" loading="lazy">
+          <p class="cartao-tipo">Site com várias páginas</p>
+          <h3>Site temático GTA VI</h3>
+          <p>Trabalho da faculdade: site com navegação entre páginas e identidade visual própria.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+          <p class="cartao-links"><a href="gta6.html">Abrir o site</a></p>
+        </article>
+
+        <article class="cartao cartao-codigo">
+          <pre aria-hidden="true"><code>int* p = &amp;numero;
+cout &lt;&lt; *p;</code></pre>
+          <p class="cartao-tipo">Estudos</p>
+          <h3>Fundamentos de C++</h3>
+          <p>Funções, ponteiros, structs, arrays e um jogo no terminal inspirado em Minecraft.</p>
+          <ul class="tags"><li>C++</li><li>Lógica</li></ul>
+          <p class="cartao-links"><a href="cpp.html">Ver os estudos</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre" aria-labelledby="titulo-sobre">
+      <h2 class="titulo-secao" id="titulo-sobre">Sobre mim</h2>
+
+      <div class="sobre-colunas">
+        <div class="sobre-texto">
           <p>
-            Conheça alguns dos principais elementos presentes na nova aventura.
+            Comecei pela base: lógica, C++ e as primeiras páginas em HTML e CSS. Depois fui para projetos maiores,
+            com banco de dados, autenticação e publicação na internet.
+          </p>
+          <p>
+            Meu projeto mais completo é a Copa Santidade, usada de verdade na organização de um campeonato.
+            Nele aprendi a pensar em quem usa o sistema no dia do jogo, em segurança e em testes automatizados.
           </p>
         </div>
 
-        <div class="cards">
-          <article class="card">
-            <img src="img/cidade.jpg" alt="Vice City" />
-
-            <div class="card-conteudo">
-              <h3>Vice City</h3>
-
-              <p>
-                Uma cidade cheia de vida, praias, ruas movimentadas e diferentes
-                lugares para explorar.
-              </p>
-
-              <a href="vicecity.html"> SAIBA MAIS </a>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="img/jasonelucia.jpg" alt="Jason" />
-
-            <div class="card-conteudo">
-              <h3>Personagens</h3>
-
-              <p>
-                Conheça Jason e Lucia, os protagonistas de uma nova história no
-                universo de GTA.
-              </p>
-
-              <a href="personagens.html"> CONHECER </a>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="img/gta-rockstar.webp" alt="Exploração em GTA VI" />
-
-            <div class="card-conteudo">
-              <h3>Mundo Aberto</h3>
-
-              <p>
-                Explore diferentes regiões e descubra novas possibilidades pelo
-                mundo do jogo.
-              </p>
-
-              <a href="explorar.html"> EXPLORAR </a>
-            </div>
-          </article>
+        <div class="habilidades">
+          <div>
+            <h3>Front-end</h3>
+            <ul><li>HTML e CSS</li><li>JavaScript e TypeScript</li><li>React</li><li>Tailwind CSS</li></ul>
+          </div>
+          <div>
+            <h3>Back-end e dados</h3>
+            <ul><li>PostgreSQL e SQL</li><li>Supabase</li><li>PHP</li><li>Java e C++</li></ul>
+          </div>
+          <div>
+            <h3>Ferramentas</h3>
+            <ul><li>Git e GitHub</li><li>Vercel</li><li>Testes automatizados</li></ul>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="frase">
-        <div>
-          <p class="subtitulo">WELCOME TO VICE CITY</p>
+    <section class="contato" id="contato" aria-labelledby="titulo-contato">
+      <h2 id="titulo-contato">Vamos conversar?</h2>
+      <p>Estou aberto a estágios, projetos e parcerias na área de tecnologia.</p>
+      <a class="contato-email" href="mailto:carlosgabrielbeltrao01@gmail.com">carlosgabrielbeltrao01@gmail.com</a>
+      <ul class="contato-redes">
+        <li><a href="https://github.com/engsCarlosBeltrao" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://www.instagram.com/gabriel_beltraozz/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+    </section>
+  </main>
 
-          <h2>Uma nova história<br />começa aqui.</h2>
+  <footer class="rodape">
+    <p>© 2026 Carlos Gabriel Beltrão</p>
+    <a href="#inicio">Voltar ao topo</a>
+  </footer>
 
-          <p>
-            Entre em uma cidade cheia de oportunidades, personagens e lugares
-            para descobrir.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <p>GTA VI - Vice City Files</p>
-
-      <p>trabalho faculdade</p>
-    </footer>
-  </body>
+  <script>
+    const botao = document.querySelector('.menu-botao');
+    const menu = document.getElementById('menu');
+    const fechar = () => { botao.setAttribute('aria-expanded', 'false'); menu.classList.remove('aberto'); };
+    botao.addEventListener('click', () => {
+      const aberto = botao.getAttribute('aria-expanded') === 'true';
+      botao.setAttribute('aria-expanded', String(!aberto));
+      menu.classList.toggle('aberto', !aberto);
+    });
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', fechar));
+  </script>
+</body>
 </html>
