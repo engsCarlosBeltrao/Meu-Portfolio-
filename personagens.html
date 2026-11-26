@@ -1,82 +1,77 @@
-<!doctype html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GTA VI - Personagens</title>
-
-    <link rel="stylesheet" href="personagens.css" />
-  </head>
-
-  <body>
-    <header>
-      <h1>GTA VI</h1>
-
-      <nav>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personagens | GTA VI</title>
+  <meta name="description" content="Conheça Jason e Lucia, os protagonistas de GTA VI.">
+  <meta name="theme-color" content="#0d0a16">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gta6.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="conteudo">
+      <a class="marca" href="gta6.html"><strong>GTA VI</strong><span>Vice City Files</span></a>
+      <nav class="menu" aria-label="Páginas do site">
         <a href="gta6.html">Início</a>
         <a href="vicecity.html">Vice City</a>
-        <a href="personagens.html">Personagens</a>
+        <a href="personagens.html" aria-current="page">Personagens</a>
+        <a href="explorar.html">Leonida</a>
+        <a class="voltar" href="index.html">Voltar ao portfólio</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="titulo">
-        <p>GRAND THEFT AUTO VI</p>
+  <main>
+    <section class="capa capa-curta">
+      <img src="img/jasonelucia.jpg" alt="">
+      <div class="conteudo">
+        <p class="chamada">Grand Theft Auto VI</p>
+        <h1><span>Personagens</span></h1>
+        <p>Os protagonistas de uma nova história em Vice City.</p>
+      </div>
+    </section>
 
-        <h2>PERSONAGENS</h2>
-
-        <span>Conheça os protagonistas de uma nova história em Vice City.</span>
-      </section>
-
-      <section class="personagens">
+    <section class="secao conteudo">
+      <div class="personagens">
         <article class="personagem">
-          <div class="foto">
-            <img src="img/Jason.jpeg" alt="Jason" />
-          </div>
-
-          <div class="informacao">
-            <p class="numero">01</p>
-
-            <h3>JASON</h3>
-
-            <h4>O SOBREVIVENTE</h4>
-
-            <p>
-              Jason cresceu cercado por golpistas e criminosos. Depois de
-              conhecer Lucia, sua vida começa a tomar novos rumos em Vice City.
-            </p>
-
-            <a href="vicecity.html">EXPLORAR VICE CITY</a>
+          <div class="personagem-foto"><img src="img/Jason.jpeg" alt="Jason" loading="lazy"></div>
+          <div class="personagem-info">
+            <p class="chamada">Protagonista</p>
+            <h2>Jason</h2>
+            <h3>O sobrevivente</h3>
+            <p>Jason cresceu cercado por golpistas e criminosos. Depois de conhecer Lucia, sua vida começa a tomar novos rumos em Vice City.</p>
           </div>
         </article>
 
         <article class="personagem invertido">
-          <div class="foto">
-            <img src="img/lucia.jpg" alt="Lucia" />
-          </div>
-
-          <div class="informacao">
-            <p class="numero">02</p>
-
-            <h3>LUCIA</h3>
-
-            <h4>UMA NOVA JORNADA</h4>
-
-            <p>
-              Lucia busca construir uma nova vida depois de enfrentar
-              dificuldades. Ao lado de Jason, ela entra em uma jornada cheia de
-              riscos.
-            </p>
-
-            <a href="gta6.html">VOLTAR AO INÍCIO</a>
+          <div class="personagem-foto"><img src="img/lucia.jpg" alt="Lucia" loading="lazy"></div>
+          <div class="personagem-info">
+            <p class="chamada">Protagonista</p>
+            <h2>Lucia</h2>
+            <h3>Uma nova jornada</h3>
+            <p>Lucia busca construir uma nova vida depois de enfrentar muitas dificuldades. Ao lado de Jason, ela entra em uma jornada cheia de riscos.</p>
           </div>
         </article>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-      <p>GTA VI - Vice City Files</p>
-      <p>trabalho faculdade</p>
-    </footer>
-  </body>
+    <section class="faixa">
+      <div class="conteudo">
+        <h2>Para onde<br>eles vão?</h2>
+        <p>Veja as regiões do estado de Leonida, o mapa completo do jogo.</p>
+        <a class="botao" href="explorar.html">Explorar Leonida</a>
+      </div>
+    </section>
+  </main>
+  <footer class="rodape">
+    <div class="conteudo">
+      <p class="aviso">Trabalho acadêmico de Carlos Gabriel Beltrão. Site de fã, sem ligação com a Rockstar Games.</p>
+      <a href="index.html">Voltar ao portfólio</a>
+    </div>
+  </footer>
+</body>
 </html>
